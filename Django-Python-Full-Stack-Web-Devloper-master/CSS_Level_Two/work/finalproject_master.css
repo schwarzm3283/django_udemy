@@ -1,0 +1,32 @@
+h2{
+text-align: center;
+font-family: 'Indie Flower', cursive;
+}
+
+.spec{
+  margin: auto;
+}
+
+/*Could also use the border spacing attribute*/
+
+td{
+  height: 200px;
+  padding: 100px;
+  border: 6px solid white;
+}
+
+#one{
+  background: #E6EFC2;
+}
+#two{
+background: #B3B99D;
+}
+#three{
+background: #134151;
+}
+#four{
+background: #7DD1DE;
+}
+#five{
+background: #77776A;
+}
