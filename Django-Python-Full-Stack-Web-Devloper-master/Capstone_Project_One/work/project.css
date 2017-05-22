@@ -1,0 +1,38 @@
+body{
+    background-color: #011627;
+    border: 60px solid #2EC4B6;
+    border-top: 0;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* top | right | bottom | left */
+
+.toptext{
+    padding: 8% 20% 5% 20%;
+}
+
+.bottomtext{
+    padding: 0 20% 0 20%;
+}
+
+.signup{
+    padding-bottom: 3%;
+}
+
+input{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.regsubmit{
+    border-radius: 25px;
+    height: 80px;
+    width: 150px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
+    margin-bottom: 4px;
+    background-color: #FF9F1C;
+}
