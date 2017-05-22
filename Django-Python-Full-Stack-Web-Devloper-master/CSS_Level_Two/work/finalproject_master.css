@@ -5,28 +5,29 @@ font-family: 'Indie Flower', cursive;
 
 .spec{
   margin: auto;
+  height: 400px;
 }
 
 /*Could also use the border spacing attribute*/
 
 td{
-  height: 200px;
+
   padding: 100px;
   border: 6px solid white;
 }
 
-#one{
+.one{
   background: #E6EFC2;
 }
-#two{
+.two{
 background: #B3B99D;
 }
-#three{
+.three{
 background: #134151;
 }
-#four{
+.four{
 background: #7DD1DE;
 }
-#five{
+.five{
 background: #77776A;
 }
