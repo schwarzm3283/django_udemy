@@ -25,11 +25,28 @@
 import random
 digits = list(range(10))
 random.shuffle(digits)
-print(digits[:3])
+x = (digits[:3])
+print(x)
 
 # Another hint:
-guess = input("What is your guess? ")
-print(guess)
+def guess():
+    x = input("What is your guess? ")
+    x = list(x)
+    return x
 
+
+def game(myguess = []):
+    win = 0
+    while win < 1:
+        myguess = guess()
+        if myguess[0] == x[0] and myguess[1] == x[1] and myguess[2] == x[2]:
+            print('you win')
+            win = 1
+        elif myguess[0] == x[0] or myguess[1] == x[1] or myguess[2] == x[2]:
+            print('close')
+        else:
+            print('nope')
+
+game()
 # Think about how you will compare the input to the random number, what format
 # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
