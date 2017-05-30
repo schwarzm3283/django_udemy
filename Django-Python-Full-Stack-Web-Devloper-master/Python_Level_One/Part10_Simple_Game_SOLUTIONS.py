@@ -51,8 +51,10 @@ def generate_clues(code,userGuess):
     for ind,num in enumerate(userGuess):
         if num == code[ind]:
             clues.append("Match")
+            print(code)
         elif num in code:
             clues.append("Close")
+            print(code)
     if clues == []:
         return ["Nope"]
     else:
@@ -63,6 +65,7 @@ print("Welcome Code Breaker! Let's see if you can guess my 3 digit number!")
 
 # Create a Secret Code to start the Game
 secretCode = generate_code()
+print(secretCode)
 print("Code has been generated, please guess a 3 digit number")
 #print(secretCode)
 

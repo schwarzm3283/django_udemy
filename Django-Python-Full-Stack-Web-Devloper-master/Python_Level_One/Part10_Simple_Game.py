@@ -23,22 +23,26 @@
 
 # Try to figure out what this code is doing and how it might be useful to you
 import random
-digits = list(range(10))
-random.shuffle(digits)
-x = (digits[:3])
-print(x)
+def random_num():
+    digits = list(range(10))
+    random.shuffle(digits)
+    return (digits[:3])
+
 
 # Another hint:
 def guess():
-    x = input("What is your guess? ")
+    x = list(input("What is your guess? "))
     x = list(x)
     return x
 
 
-def game(myguess = []):
+def game():
     win = 0
+    x = random_num()
+    print(x)
     while win < 1:
         myguess = guess()
+        print(myguess)
         if myguess[0] == x[0] and myguess[1] == x[1] and myguess[2] == x[2]:
             print('you win')
             win = 1

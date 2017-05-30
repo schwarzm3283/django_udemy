@@ -19,7 +19,6 @@ def printer():
 print(x)
 print(printer())
 
-
 # What do you imagine the output of printer() is? 25 or 50? What is the output
 # of print x? 25 or 50? Or what about this:
 
