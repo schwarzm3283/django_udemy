@@ -7,7 +7,7 @@
 # For example:
 print('Hello
 
-
+print(mylist)
 # Note how we get a SyntaxError, with the further description that it was an EOL
 # (End of Line Error) while scanning the string literal. This is specific enough
 # for us to see that we forgot a single quote at the end of the line. Understanding
@@ -63,7 +63,7 @@ else:
 try:
     f = open('testfile','r')
     f.write('Test write this')
-except IOError:
+except:
     # This will only check for an IOError exception and then execute this print statement
    print("Error: Could not find file or read data")
 else:

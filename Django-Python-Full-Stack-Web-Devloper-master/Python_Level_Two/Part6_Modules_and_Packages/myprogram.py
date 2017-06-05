@@ -1,3 +1,8 @@
+
+from mymodule import *
+func_in_mymodule()
+
+
 ################
 # Example Three:
 ################

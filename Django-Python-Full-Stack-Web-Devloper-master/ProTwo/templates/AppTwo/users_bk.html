@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1>Hi welcome to user page</h1>
+    <h2>Here are your users</h2>
+
+    <div class="users">
+        {% if user_records %}
+          <ol>
+
+            {% for usr in user_records %}
+            <li>User Info</li>
+              <ul>
+                <li>First Name: {{usr.first_name}}</li>
+                <li>Last Name: {{usr.last_name}}</li>
+                <li>Email: {{usr.email}}</li>
+              </ul>
+              {% endfor %}
+            </ol>
+
+          {% else %}
+            <p>NO Users found!</p>
+          {% endif %}
+
+    </div>
+
+
+  </body>
+</html>
