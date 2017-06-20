@@ -1,7 +1,7 @@
-"""simplesocial URL Configuration
+"""final_social_clone URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.10/topics/http/urls/
+    https://docs.djangoproject.com/en/1.11/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,10 +14,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf import settings
 from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.HomePage.as_view(),name='home')
+    url(r"^$", views.HomePage.as_view(), name="home"),
+    url(r"^test/$", views.TestPage.as_view(), name="test"),
+    url(r"^thanks/$", views.ThanksPage.as_view(), name="thanks"),
+    url(r"^admin/", admin.site.urls),
+    url(r"^accounts/", include("accounts.urls", namespace="accounts")),
+    url(r"^accounts/", include("django.contrib.auth.urls")),
+    url(r"^posts/", include("posts.urls", namespace="posts")),
+    url(r"^groups/",include("groups.urls", namespace="groups")),
+
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        url(r'^__debug__/',include(debug_toolbar.urls))
+    ] + urlpatterns
